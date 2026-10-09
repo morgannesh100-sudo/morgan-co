@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan & Co. | Premium Network Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <!-- Professional Crisp SVG Network Logo Icon -->
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                <circle cx="12" cy="5" r="3" fill="#0066cc"/>
+                <circle cx="5" cy="17" r="3" fill="#0066cc"/>
+                <circle cx="19" cy="17" r="3" fill="#0066cc"/>
+                <line x1="12" y1="8" x2="6.5" y2="14.5" stroke="#0066cc" stroke-width="2"/>
+                <line x1="12" y1="8" x2="17.5" y2="14.5" stroke="#0066cc" stroke-width="2"/>
+                <line x1="8" y1="17" x2="16" y2="17" stroke="#0066cc" stroke-width="2" stroke-dasharray="2 2"/>
+            </svg>
+            <span class="logo-text">Morgan & Co.</span>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#support">Support</a>
+            <button class="btn btn-outline" onclick="openModal('loginModal')">Log In</button>
+            <button class="btn btn-primary" onclick="openModal('signupModal')">Sign Up</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Reliable Connections. <br><span class="highlight">Zero Lag.</span></h1>
+            <p>Experiencing network lagging or connectivity drops? Morgan & Co. keeps your business running smoothly with lightning-fast network optimization.</p>
+            <div class="cta-buttons">
+                <a href="tel:0768797334" class="btn btn-primary Call-btn">📞 Call Us: 0768797334</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Expanded to 6 columns) -->
+    <section id="services" class="services-section">
+        <h2>Our Network Services</h2>
+        <p class="section-subtitle">We diagnose and resolve your tech headaches instantly.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">⚡</div>
+                <h3>Network Lagging Fixes</h3>
+                <p>We eliminate latency, packet loss, and buffering issues to ensure real-time performance.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🛠️</div>
+                <h3>Hardware Troubleshooting</h3>
+                <p>Comprehensive optimization and setup for routers, switches, and local access points.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🔒</div>
+                <h3>Secure Connections</h3>
+                <p>Protecting your network traffic from vulnerabilities, breaches, and external threats.</p>
+            </div>
+            <!-- New Service 4 -->
+            <div class="service-card">
+                <div class="icon">☁️</div>
+                <h3>Cloud Networking</h3>
+                <p>Seamlessly link your infrastructure to AWS, Azure, or Google Cloud environments securely.</p>
+            </div>
+            <!-- New Service 5 -->
+            <div class="service-card">
+                <div class="icon">🛡️</div>
+                <h3>Cyber Defense & Firewalls</h3>
+                <p>Deploy enterprise security rules and network firewalls to block intruders actively.</p>
+            </div>
+            <!-- New Service 6 -->
+            <div class="service-card">
+                <div class="icon">🔌</div>
+                <h3>Structured Cabling</h3>
+                <p>Clean, certified physical Cat6/Fiber installation layout design for corporate offices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgent Support Hotline Banner -->
+    <section id="support" class="support-banner">
+        <h2>Having Urgent Network Issues?</h2>
+        <p>Don't let downtime stall your day. Speak directly to an expert engineer right now.</p>
+        <a href="tel:0768797334" class="hotline-link">Call Support: 0768797334</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Morgan & Co. All rights reserved.</p>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <form onsubmit="event.preventDefault();">
+                <label>Email Address</label>
+                <input type="email" placeholder="name@company.com" required>
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" required>
+                <button type="submit" class="btn btn-primary w-100">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Create an Account</h2>
+            <form onsubmit="event.preventDefault();">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required>
+                <label>Email Address</label>
+                <input type="email" placeholder="name@company.com" required>
+                <label>Password</label>
+                <input type="password" placeholder="Create secure password" required>
+                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simple Dynamic Modal Script -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
